@@ -1,0 +1,9 @@
+node_modules
+
+# intellij files
+.idea
+*.iml
+
+# vim tmp files
+*.swp
+*.un~

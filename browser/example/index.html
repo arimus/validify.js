@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Browserify Example</title>
+    <script src="../dist/validify.standalone.min.js"></script>
+  </head>
+  <body>
+    <p><span id="email1">test@example.com</span> <span id="valid1">???</span></p>
+    <p><span id="email2">test@invalid</span> <span id="valid2">???</span></p>
+    <p>If you see the result on the right side of the email addresses, then everything
+    worked fine. If you see question marks, something went wrong.</p>
+    <script>
+      document.getElementById('valid1').innerHTML = validify.email('test@example.com')
+      document.getElementById('valid2').innerHTML = validify.email('test@invalid')
+    </script>
+  </body>
+</html>
