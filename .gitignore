@@ -1,3 +1,7 @@
+# browserify
+browser/test/browserified_tests.js
+
+# node
 node_modules
 
 # intellij files
