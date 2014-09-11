@@ -84,6 +84,25 @@
       return false;
     }
 
+    // fail of the value is missing
+    if (failOnMissing && value === undefined) {
+      processFailure(this, 'missingValue', name, value, options);
+      return false;
+    }
+
+    // fail if the value is empty
+    if (failOnEmpty &&
+        (value === undefined ||
+         value === null ||
+         value === '' ||
+         (typeof value === 'object' && Object.keys(value).length === 0) ||
+         Array.isArray(value) && value.length === 0))
+    {
+
+      processFailure(this, 'emptyValue', name, value, options);
+      return false;
+    }
+
     // TODO - cache these, so that we don't re-parse every single time we do a validation
     var args = [ trimStrings && type === 'string' && typeof value === 'string' ? value.trim() : value ];
     var params = getParamNames(this.evaluate);
@@ -311,6 +330,12 @@
     switch (failureKey) {
     case 'invalidType':
       failureMessage = 'Validator %{name} failed for value \'%{value}\' due to invalid type \'%{type}\'';
+      break;
+    case 'missingValue':
+      failureMessage = 'Validator %{name} value missing';
+      break;
+    case 'emptyValue':
+      failureMessage = 'Validator %{name} value empty';
       break;
     default:
       failureMessage = 'Validator %{name} failed for value \'%{value}\'';
