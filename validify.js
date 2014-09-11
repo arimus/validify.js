@@ -116,11 +116,12 @@
         option = validifyInstance;
       } else if (this.args[i-1]) {
         // validator arg options
-        var argType = this.args[i-1] ? this.args[i-1].type : 'undefined';
-        var argFailOnWrongType = this.args[i-1].failOnWrongType || failOnWrongType;
-        var argFailOnMissing = this.args[i-1].failOnMissing || failOnMissing;
-        var argFailOnEmpty = this.args[i-1].failOnEmpty || failOnEmpty;
-        var argTrimStrings = this.args[i-1].trimStrings || trimStrings;
+        var arg = this.args[i-1];
+        var argType = arg ? arg.type : 'undefined';
+        var argFailOnWrongType = arg.failOnWrongType || failOnWrongType;
+        var argFailOnMissing = arg.failOnMissing || failOnMissing;
+        var argFailOnEmpty = arg.failOnEmpty || failOnEmpty;
+        var argTrimStrings = arg.trimStrings || trimStrings;
 
         // if we have an option, check it against type
         //console.log('option', option, 'expected type', type, 'type', typeof option);
@@ -153,7 +154,7 @@
         }
 
         // check aliases for values if not specified as default name (e.g. gt for min)
-        var argumentAliases = this.args[i-1].aliases;
+        var argumentAliases = arg.aliases;
         if (option === undefined && argumentAliases && options != null) {
           for (j=0; j < argumentAliases.length; j++) {
             //console.log('checking argument aliases', argumentAliases[j], options[argumentAliases[j]]);
@@ -166,21 +167,21 @@
           }
         }
 
-        //console.log('option', param, 'value', option, 'args', this.args[i-1], 'aliasDefaults', this.args[i-1].aliasDefaults);
+        //console.log('option', param, 'value', option, 'args', arg, 'aliasDefaults', arg.aliasDefaults);
 
         // if we have alias defaults, use that
         if (option === undefined &&
-            this.args[i-1] != null &&
-            this.args[i-1].aliasDefaults != null &&
-            this.args[i-1].aliasDefaults[name] != null)
+            arg != null &&
+            arg.aliasDefaults != null &&
+            arg.aliasDefaults[name] != null)
         {
           // pull from alias defaults
-          option = this.args[i-1].aliasDefaults[name];
+          option = arg.aliasDefaults[name];
           //console.log('using alias default');
         // if we have args, use that
-        } else if (option === undefined && this.args[i-1]) {
+        } else if (option === undefined && arg) {
           //console.log('using default value for param', param);
-          option = this.args[i-1].default;
+          option = arg.default;
           //console.log('using arg default');
         }
 
