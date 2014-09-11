@@ -53,7 +53,7 @@ Constraints
 
 ###Format
 
-```json
+```javascript
 [
   {
     <attribute>: {
@@ -109,7 +109,7 @@ firstName length > 3
 </pre>
 
 *Rule:*
-```json
+```javascript
 { 
   firstName: { 
     greaterThan: { min: 3 } 
@@ -135,7 +135,7 @@ firstName present && length > 3
 </pre>
 
 *Rule:*
-```json
+```javascript
 [
   { 
     id: { 
@@ -173,7 +173,7 @@ fi
 </pre>
 
 *Rule:*
-```json
+```javascript
 [
   {
     isFloat: {
@@ -222,7 +222,7 @@ list.field1 == true
 </pre>
 
 *Rule:*
-```json
+```javascript
 [
   {
     isFloat: {
