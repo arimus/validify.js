@@ -9,6 +9,9 @@ Features:
 
 **NOTE: this library is not yet stable and is likely to change and be refactored rapidly**
 
+[![browser support](https://ci.testling.com/arimus/validify.js.png)
+](https://ci.testling.com/arimus/validify.js)
+
 Install
 -------
 
