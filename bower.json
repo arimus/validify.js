@@ -1,0 +1,27 @@
+{
+  "name": "validify.js",
+  "main": "validify.js",
+  "version": "0.1.0",
+  "homepage": "http://arimus.github.io/validify.js/",
+  "authors": [
+    "David Castro <arimus@gmail.com>"
+  ],
+  "description": "JavaScript library for data validation",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "validate",
+    "validify",
+    "validation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
