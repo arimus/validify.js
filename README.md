@@ -260,10 +260,10 @@ This library was partially inspired by several other frameworks and validation
 libraries, which are fantastic in their own right, but did not quite meet my
 needs.
 
-[validatejs](validatejs.org)
-[mongoosejs](http://mongoosejs.com/docs/validation.html)
-[mongoose-validator](https://github.com/leepowellcouk/mongoose-validator)
-[validator.js](https://github.com/chriso/validator.js)
+- [validatejs](validatejs.org)
+- [mongoosejs](http://mongoosejs.com/docs/validation.html)
+- [mongoose-validator](https://github.com/leepowellcouk/mongoose-validator)
+- [validator.js](https://github.com/chriso/validator.js)
 
 If you are looking for something more battle tested or widely adopted, then
 check them out.
