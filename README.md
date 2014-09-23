@@ -229,25 +229,8 @@ list.field1 == true
 ```javascript
 [
   {
-    isFloat: {
+    "list.field1": {
       eq: true
-    },
-    integer: {
-      present: false
-    },
-    float: {
-      present: true
-    }
-  },
-  {
-    isFloat: {
-      eq: true
-    },
-    integer: {
-      present: false
-    },
-    float: {
-      present: true
     }
   }
 ]
