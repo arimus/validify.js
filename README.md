@@ -92,9 +92,9 @@ validify.validate(testObject, [
 
 Modes:
 
-**all** (and) - every one of the listed constraints must be true
-**any** (or) - at least one of the listed constraints must be true
-**one** (xor) - only one of the listed constraints can be true
+* **all** (and) - every one of the listed constraints must be true
+* **any** (or) - at least one of the listed constraints must be true
+* **one** (xor) - only one of the listed constraints can be true
 
 ###Example 1
 
@@ -135,7 +135,7 @@ lastName (string)
 *Logic:*
 <pre>
 id must be present
-firstName present && length > 3
+firstName present && (0 <= length < 10)
 </pre>
 
 *Rule:*
@@ -192,13 +192,13 @@ fi
   },
   {
     isFloat: {
-      eq: true
+      eq: false
     },
     integer: {
-      present: false
+      present: true
     },
     float: {
-      present: true
+      present: false
     }
   }
 ]
