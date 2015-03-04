@@ -143,7 +143,7 @@ firstName present && (0 <= length < 10)
 [
   { 
     id: { 
-      present: false 
+      present: true 
     } 
   },
   { 
@@ -254,6 +254,6 @@ check them out.
 License
 -------
 
-The MIT License (MIT), Copyright (c) 2014 David Castro <arimus@gmail.com>
+The MIT License (MIT), Copyright (c) 2014-2014 David Castro <arimus@gmail.com>
 
 See LICENSE file for details
